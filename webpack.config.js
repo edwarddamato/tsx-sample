@@ -1,3 +1,4 @@
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -9,18 +10,29 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 const SOURCE = /src/;
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+  },
+  devtool: "source-map",
+  resolve: {
+    extensions: [
+      '.tsx',
+      '.ts',
+      '.js',
+      '.json',
+    ]
   },
   module: {
     loaders: [
+      { enforce: 'pre', test: /\.js$/, loaders: 'source-map-loader', include: [SOURCE] },
+      { test: /\.tsx?$/, loader: 'awesome-typescript-loader', include: [SOURCE] },
       { test: /\.js$/, loader: 'babel-loader', include: [SOURCE] },
       { test: /\.jsx$/, loader: 'babel-loader', include: [SOURCE] },
       { test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader!sass-loader'
+          fallback: 'style-loader',
+          use: 'css-loader!postcss-loader!sass-loader'
         })
       }
     ]
