@@ -1,19 +1,15 @@
 {
     "compilerOptions": {
-        "outDir": "ts-build",
+        "outDir": "ts-server-build",
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "es6",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "target": "es6",
-        "jsx": "react",
-        "baseUrl": "src"
+        "baseUrl": "../server"
     },
     "include": [
-        "./src/**/*"
-    ],
-    "exclude": [
-        "./server"
+        "../server"
     ]
 }

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="component_moo"
+>
+  <div>
+    Name: 
+    Edward D'Amato
+  </div>
+  <div>
+    Location: 
+    London
+  </div>
+  <div>
+    Bio: 
+    Moo
+  </div>
+</div>
+`;

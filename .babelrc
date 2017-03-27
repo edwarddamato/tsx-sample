@@ -1,17 +1,12 @@
 {
   "presets": ["es2015", "react"],
   "plugins": [
-    ["module-resolver", {
-      "root": ["./src"]
-    }]
+    "transform-regenerator",
+    "transform-runtime"
   ],
   "env": {
     "test": {
-      "plugins": [
-        ["module-resolver", {
-          "root": ["./src"]
-        }]
-      ]
+      "plugins": ["es2015", "react"]
     }
   }
 }

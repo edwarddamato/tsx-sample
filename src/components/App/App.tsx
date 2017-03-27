@@ -1,12 +1,40 @@
 import * as React from 'react';
+import { IUser } from '../../api/github/interfaces.d';
+import { Github } from '../../api/github';
 import { Moo } from '../Moo';
 import './App.scss';
 
-export class App extends React.Component<undefined, undefined> {
+interface IAppState {
+  readonly user?: IUser
+}
+
+export class App extends React.Component<undefined, IAppState> {
+  constructor (props: undefined) {
+    super(props);
+
+    this.state = {
+      user: undefined
+    };
+  }
+
+  private async getUser () {
+    const user = await Github.GetUser('edwarddamato');
+    this.setState({ user });
+  }
+
+  componentDidMount () {
+    this.getUser();
+  }
+
   render () {
     return (
       <div className="root_container">
-        <Moo name="Foo" />
+        <h1>Let's get a Github user</h1>
+        {
+          this.state.user
+          ? <Moo user={this.state.user} />
+          : null
+        }
       </div>
     );
   }
