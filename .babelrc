@@ -6,7 +6,6 @@
   ],
   "env": {
     "test": {
-      "plugins": ["es2015", "react"]
     }
   }
 }
