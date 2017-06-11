@@ -2,7 +2,7 @@
     "compilerOptions": {
         "outDir": "ts-build",
         "sourceMap": true,
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "module": "es6",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
