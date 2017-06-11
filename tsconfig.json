@@ -4,11 +4,10 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "es6",
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "target": "es6",
+        "target": "es5",
         "jsx": "react",
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "lib": ["es2015", "dom"]
     },
     "include": [
         "./src/**/*"

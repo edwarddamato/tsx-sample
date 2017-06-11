@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IUser } from '../../api/github/interfaces.d';
-import { Github } from '../../api/github';
-import { Moo } from '../Moo';
+import { Github } from '../../api/github/index';
+import { Moo } from '../Moo/index';
 import './App.scss';
 
 interface IAppState {
