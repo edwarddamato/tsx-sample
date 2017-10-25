@@ -6,13 +6,12 @@
         "module": "es6",
         "target": "es5",
         "jsx": "react",
-        "baseUrl": "src",
+        "moduleResolution": "node",
         "lib": ["es2015", "dom"]
     },
-    "include": [
-        "./src/**/*"
-    ],
     "exclude": [
-        "./server"
+        "./server",
+        "node_modules",
+        "**/__tests__/*.tsx"
     ]
 }
