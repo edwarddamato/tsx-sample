@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { IUser } from '../../api/github/interfaces.d';
 import { Github } from '../../api/github/index';
-import { Moo } from '../Moo/index';
+import { Moo } from '../Moo';
 import './App.scss';
 
 interface IAppState {
   readonly user?: IUser
 }
 
-export class App extends React.Component<undefined, IAppState> {
+export class App extends React.Component<null, IAppState> {
   constructor (props: undefined) {
     super(props);
 
