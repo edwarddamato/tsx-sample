@@ -1,16 +1,20 @@
 {
     "compilerOptions": {
-        "outDir": "ts-build",
+        "outDir": "./dist/",
         "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "es6",
+        "module": "commonjs",
         "target": "es5",
         "jsx": "react",
+        "lib": ["es6", "dom"],
         "moduleResolution": "node",
-        "lib": ["es2015", "dom"]
+        "rootDir": "src",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true
     },
     "exclude": [
-        "./server",
+        "server",
         "node_modules",
         "**/__tests__/*.tsx"
     ]

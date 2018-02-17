@@ -6,7 +6,7 @@ export interface IMooProps { user: IUser; }
 export interface IMooState { user: IUser; }
 
 export class Moo extends React.Component<IMooProps, IMooState> {
-  constructor(props: undefined) {
+  constructor(props: IMooProps) {
     super(props);
 
     this.state = {

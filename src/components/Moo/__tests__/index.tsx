@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Moo } from '../index';
+import { Moo } from '../';
 import { IUser } from '../../../api/github/interfaces.d';
 import { create } from 'react-test-renderer';
 

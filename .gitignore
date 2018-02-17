@@ -1,6 +1,7 @@
 node_modules/
 .vscode
 npm-debug.log
+yarn-error.log
 coverage/
 dist/
 server/ts-server-build/

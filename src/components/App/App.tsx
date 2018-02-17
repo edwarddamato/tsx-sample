@@ -8,8 +8,8 @@ interface IAppState {
   readonly user?: IUser
 }
 
-export class App extends React.Component<null, IAppState> {
-  constructor (props: undefined) {
+export class App extends React.Component<{}, IAppState> {
+  constructor (props: {}) {
     super(props);
 
     this.state = {
@@ -39,5 +39,3 @@ export class App extends React.Component<null, IAppState> {
     );
   }
 }
-
-export default App;

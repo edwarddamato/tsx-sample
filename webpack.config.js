@@ -13,6 +13,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
+    path: __dirname + "/dist"
   },
   devtool: "source-map",
   resolve: {
@@ -24,7 +25,7 @@ module.exports = {
     ]
   },
   module: {
-    loaders: [
+    rules: [
       { enforce: 'pre', test: /\.js$/, loaders: 'source-map-loader', include: [SOURCE] },
       { test: /\.tsx?$/, loader: 'awesome-typescript-loader', include: [SOURCE] },
       { test: /\.js$/, loader: 'babel-loader', include: [SOURCE] },
