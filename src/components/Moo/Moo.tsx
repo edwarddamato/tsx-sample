@@ -2,19 +2,23 @@ import * as React from 'react';
 import { IUser } from '../../api/github/interfaces.d';
 import './Moo.scss';
 
-export interface IMooProps { user: IUser; }
-export interface IMooState { user: IUser; }
+export interface IMooProps {
+  user: IUser;
+}
+export interface IMooState {
+  user: IUser;
+}
 
 export class Moo extends React.Component<IMooProps, IMooState> {
   constructor(props: IMooProps) {
     super(props);
 
     this.state = {
-      user: this.props.user,
+      user: this.props.user
     };
   }
 
-  render () {
+  render() {
     return (
       <div className="component_moo">
         <div>Name: {this.state.user.Name}</div>

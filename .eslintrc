@@ -1,3 +1,23 @@
 {
-  "parser": "typescript-eslint-parser"
+  "parser": "typescript-eslint-parser",
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 120,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "parser": "typescript"
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "jquery": true
+  }
 }

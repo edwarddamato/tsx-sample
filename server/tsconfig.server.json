@@ -1,15 +1,13 @@
 {
-    "compilerOptions": {
-        "outDir": "ts-server-build",
-        "sourceMap": true,
-        "noImplicitAny": false,
-        "module": "es6",
-        "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
-        "target": "es6",
-        "baseUrl": "../server"
-    },
-    "include": [
-        "../server"
-    ]
+  "compilerOptions": {
+    "outDir": "ts-server-build",
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "baseUrl": "../server"
+  },
+  "include": ["../server"]
 }

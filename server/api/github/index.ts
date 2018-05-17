@@ -8,11 +8,11 @@ export class Api {
       method: 'GET',
       credentials: 'include'
     };
-    
+
     const searchUrl = `${this.apiUrl}${username}`;
 
     const response = await fetch(searchUrl, requestOptions);
-    const json:Promise<any> = await response.json();
+    const json: Promise<any> = await response.json();
     return json;
   }
 }

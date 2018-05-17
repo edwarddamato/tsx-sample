@@ -2,7 +2,7 @@ import { IUser } from './interfaces.d';
 export class Api {
   private static readonly serverUrl: string = 'http://localhost:4000';
   private static readonly headers: Headers = new Headers({
-    'Accept': 'application/json',
+    Accept: 'application/json',
     'Content-Type': 'application/json'
   });
 

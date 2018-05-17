@@ -3,4 +3,3 @@ export interface IUser {
   readonly Location: string;
   readonly Bio: string;
 }
-

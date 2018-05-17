@@ -5,11 +5,11 @@ import { Moo } from '../Moo';
 import './App.scss';
 
 interface IAppState {
-  readonly user?: IUser
+  readonly user?: IUser;
 }
 
 export class App extends React.Component<{}, IAppState> {
-  constructor (props: {}) {
+  constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -17,24 +17,20 @@ export class App extends React.Component<{}, IAppState> {
     };
   }
 
-  private async getUser () {
+  private async getUser() {
     const user = await Github.GetUser('edwarddamato');
     this.setState({ user });
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.getUser();
   }
 
-  render () {
+  render() {
     return (
       <div className="root_container">
         <h1>Let's get a Github user</h1>
-        {
-          this.state.user
-          ? <Moo user={this.state.user} />
-          : null
-        }
+        {this.state.user ? <Moo user={this.state.user} /> : null}
       </div>
     );
   }
