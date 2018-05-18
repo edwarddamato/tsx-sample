@@ -20,7 +20,7 @@ export class Moo extends React.Component<IMooProps, IMooState> {
 
   render() {
     return (
-      <div className="component_moo">
+      <div className={'component_moo'}>
         <div>Name: {this.state.user.Name}</div>
         <div>Location: {this.state.user.Location}</div>
         <div>Bio: {this.state.user.Bio}</div>

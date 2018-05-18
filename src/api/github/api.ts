@@ -6,7 +6,7 @@ export class Api {
     'Content-Type': 'application/json'
   });
 
-  private static async Get(path: string): Promise<any> {
+  private static async get(path: string): Promise<any> {
     const response: Response = await fetch(`${this.serverUrl}${path}`, {
       method: 'GET',
       headers: this.headers
@@ -14,8 +14,8 @@ export class Api {
     return await response.json();
   }
 
-  public static async FetchUser(username: string): Promise<IUser> {
-    const json = await this.Get(`/api/user?username=${username}`);
+  public static async fetchUser(username: string): Promise<IUser> {
+    const json = await this.get(`/api/user?username=${username}`);
     return {
       Name: json.name,
       Location: json.location,

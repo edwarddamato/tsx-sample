@@ -18,7 +18,7 @@ export class App extends React.Component<{}, IAppState> {
   }
 
   private async getUser() {
-    const user = await Github.GetUser('edwarddamato');
+    const user = await Github.getUser('edwarddamato');
     this.setState({ user });
   }
 
@@ -28,7 +28,7 @@ export class App extends React.Component<{}, IAppState> {
 
   render() {
     return (
-      <div className="root_container">
+      <div className={'root_container'}>
         <h1>Let's get a Github user</h1>
         {this.state.user ? <Moo user={this.state.user} /> : null}
       </div>
